@@ -1,0 +1,24 @@
+// comandos clase 2
+
+// P1 : Obtener 10 IP con más queries
+time cat data.csv | awk -F, '{print $3}' |  sort | uniq -c | sort -n | tail -10
+
+// P2 : Obtener 10 dominios con más queries
+time cat data.csv | awk -F, '{print $4}' |  sort | uniq -c | sort -n | tail -10
+
+// P3 : Ver si realmente es una ataque -> q + h, q + d, q + h + d
+
+cat data.csv | awk -F, ' {print  $2 " " $4}' | grep -w "t13" | awk -F: '{print $1}' | sort -n | uniq -c > graph.csv
+
+cat data.csv | awk -F, ' {print  $1 " " $4}' | grep -w "t13" | awk '{print $1}' | sort | uniq -c > graph2.csv
+
+// tailog file t(mms) [xip|xdom] [dom|ip] -> eficiente < 1 seg.
+// parsear entrada
+// abrir archivo
+// ver tiempo actual
+// ver tiempo inicial para los t(mms)
+// ver que buscar en tiempo **
+// calcular largo del archivo
+// leer el ultimo bloque de 4 kB.
+// or leer desde mitad del largo del archivo y busqueda binaria.
+// guardar en cache??? o leer linealmente desde ahi??
