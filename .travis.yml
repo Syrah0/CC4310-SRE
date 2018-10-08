@@ -2,4 +2,4 @@ language: c
 compiler: gcc
 
 script:
-- gcc tailog.c -o tailog
+- gcc Trabajo2/tailog.c -o Trabajo2/tailog
