@@ -3,4 +3,3 @@ compiler: gcc
 
 script:
 - gcc tailog.c -o tailog
-- ./tailog
