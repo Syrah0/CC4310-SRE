@@ -1,6 +1,6 @@
 # SRE
 
-Tailog es una función similar a _tail_.  Esta función debe ser capaz de leer un archivo grande (file) y filtrarlo a partir de dos condiciones:
+Tailog (_tailog.c_) es una función similar a _tail_.  Esta función debe ser capaz de leer un archivo grande (file) y filtrarlo a partir de dos condiciones:
 
 * **time**: filtra los últimos _time_ **minutos**. Estos se cuentan desde el tiempo actual, no desde el último tiempo presente en el archivo. _Por ejemplo_:
 
@@ -25,4 +25,5 @@ _Ejemplo:_
 ```./tailog data.csv 10```
 
 * Filtrar por los últimos _10 minutos_ y por la ip _0.0.0.0_ del archivo _data.csv_:
+
 ```./tailog data.csv 10 xip 0.0.0.0```
